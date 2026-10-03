@@ -45,7 +45,7 @@ install.packages(c("dplyr", "tidyr", "readr"))
 
 ## Repository structure
 ```
-bit316-a1-<studentID>/
+bit316-a1-400622038850/
 |-- bit316_assignment1.R   main script
 |-- data/starwars.csv      dataset used
 |-- data-raw/make_dataset.R  how the CSV was produced
