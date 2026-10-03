@@ -1,8 +1,8 @@
 # BIT316 Assignment 1 - Data Structures & Data Wrangling
 
 **Course:** BIT316 R Programming, BlueCrest College, Ghana
-**Student:** <Your Full Name> (<studentID>)
-**Lecturer:** Mark Kofi Amoani Mensah
+   **Student:** Kennedy Edlingston (400622038850)
+   **Lecturer:** Mark Kofi Amoani Mensah
 
 ## What this project does
 `bit316_assignment1.R` is a single R script, organised in four parts:
