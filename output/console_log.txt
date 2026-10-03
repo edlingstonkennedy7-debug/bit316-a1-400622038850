@@ -1,0 +1,263 @@
+
+================ PART A: NATIVE DATA STRUCTURES ================
+Heights in metres: 1.72 1.67 0.96 2.02 1.5 
+Mean height (cm): 157.4 | SD: 39.11 
+Upper-case names: LUKE C-3PO R2-D2 VADER LEIA 
+[1] 167
+[1] 172 202
+[1] 167  96 202 150
+[1] 172 167 202
+Vader 
+  202 
+ Luke C-3PO R2-D2 Vader  Leia 
+  172   167    96   202   150 
+
+Factor:
+[1] Light Dark  Light Dark  Light Light
+Levels: Light Dark
+Levels: Light Dark 
+Number of levels: 2 
+side_fct
+Light  Dark 
+    4     2 
+[1] "Luke Skywalker"
+[1] 172
+[1] "A New Hope" "Empire"     "Jedi"      
+[1] "Empire"
+List of 5
+ $ name     : chr "Luke Skywalker"
+ $ height_cm: num 172
+ $ is_jedi  : logi TRUE
+ $ films    : chr [1:3] "A New Hope" "Empire" "Jedi"
+ $ scores   : Named num [1:2] 80 95
+  ..- attr(*, "names")= chr [1:2] "math" "force"
+
+Matrix:
+   c1 c2 c3
+r1  1  2  3
+r2  4  5  6
+r3  7  8  9
+c1 c2 c3 
+ 4  5  6 
+r1 r2 r3 
+ 3  6  9 
+[1] 6
+Matrix dimensions: 3 3 
+
+Data frame:
+  name height  jedi
+1 Luke    172  TRUE
+2 Leia    150 FALSE
+3  Han    180 FALSE
+4 Yoda     66  TRUE
+  name height  jedi
+2 Leia    150 FALSE
+[1] 172 150 180  66
+[1] "Luke" "Leia" "Han"  "Yoda"
+[1] 180
+  name height jedi
+1 Luke    172 TRUE
+4 Yoda     66 TRUE
+
+================ PART B: IMPORT & EXPLORE ================
+Rows: 87 | Columns: 12 
+[1] 87 12
+       name      height        mass  hair_color  skin_color   eye_color 
+"character"   "numeric"   "numeric" "character" "character" "character" 
+ birth_year         sex      gender   homeworld     species     n_films 
+  "numeric" "character" "character" "character" "character"   "numeric" 
+Rows: 87
+Columns: 12
+$ name       <chr> "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Or…
+$ height     <dbl> 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 2…
+$ mass       <dbl> 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.…
+$ hair_color <chr> "blond", NA, NA, "none", "brown", "brown, grey", "brown", N…
+$ skin_color <chr> "fair", "gold", "white, blue", "white", "light", "light", "…
+$ eye_color  <chr> "blue", "yellow", "red", "yellow", "brown", "blue", "blue",…
+$ birth_year <dbl> 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, …
+$ sex        <chr> "male", "none", "none", "male", "female", "male", "female",…
+$ gender     <chr> "masculine", "masculine", "masculine", "masculine", "femini…
+$ homeworld  <chr> "Tatooine", "Tatooine", "Naboo", "Tatooine", "Alderaan", "T…
+$ species    <chr> "Human", "Droid", "Droid", "Human", "Human", "Human", "Huma…
+$ n_films    <dbl> 5, 6, 7, 4, 5, 3, 3, 1, 1, 6, 3, 2, 5, 4, 1, 3, 3, 1, 5, 5,…
+spc_tbl_ [87 × 12] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ name      : chr [1:87] "Luke Skywalker" "C-3PO" "R2-D2" "Darth Vader" ...
+ $ height    : num [1:87] 172 167 96 202 150 178 165 97 183 182 ...
+ $ mass      : num [1:87] 77 75 32 136 49 120 75 32 84 77 ...
+ $ hair_color: chr [1:87] "blond" NA NA "none" ...
+ $ skin_color: chr [1:87] "fair" "gold" "white, blue" "white" ...
+ $ eye_color : chr [1:87] "blue" "yellow" "red" "yellow" ...
+ $ birth_year: num [1:87] 19 112 33 41.9 19 52 47 NA 24 57 ...
+ $ sex       : chr [1:87] "male" "none" "none" "male" ...
+ $ gender    : chr [1:87] "masculine" "masculine" "masculine" "masculine" ...
+ $ homeworld : chr [1:87] "Tatooine" "Tatooine" "Naboo" "Tatooine" ...
+ $ species   : chr [1:87] "Human" "Droid" "Droid" "Human" ...
+ $ n_films   : num [1:87] 5 6 7 4 5 3 3 1 1 6 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   name = col_character(),
+  ..   height = col_double(),
+  ..   mass = col_double(),
+  ..   hair_color = col_character(),
+  ..   skin_color = col_character(),
+  ..   eye_color = col_character(),
+  ..   birth_year = col_double(),
+  ..   sex = col_character(),
+  ..   gender = col_character(),
+  ..   homeworld = col_character(),
+  ..   species = col_character(),
+  ..   n_films = col_double()
+  .. )
+ - attr(*, "problems")=<pointer: 0x000000ee7f8ff8d0> 
+        name        height           mass             hair_color     skin_color
+ Length   :87   Min.   : 66.0   Min.   :  15.00   Length   :87   Length   :87  
+ N.unique :87   1st Qu.:167.0   1st Qu.:  55.60   N.unique :11   N.unique :31  
+ N.blank  : 0   Median :180.0   Median :  79.00   N.blank  : 0   N.blank  : 0  
+ Min.nchar: 3   Mean   :174.6   Mean   :  97.31   Min.nchar: 4   Min.nchar: 3  
+ Max.nchar:21   3rd Qu.:191.0   3rd Qu.:  84.50   Max.nchar:13   Max.nchar:19  
+                Max.   :264.0   Max.   :1358.00   NAs      : 5                 
+                NAs    :6       NAs    :28                                     
+     eye_color    birth_year            sex           gender       homeworld 
+ Length   :87   Min.   :  8.00   Length   :87   Length   :87   Length   :87  
+ N.unique :15   1st Qu.: 35.00   N.unique : 4   N.unique : 2   N.unique :48  
+ N.blank  : 0   Median : 52.00   N.blank  : 0   N.blank  : 0   N.blank  : 0  
+ Min.nchar: 3   Mean   : 87.57   Min.nchar: 4   Min.nchar: 8   Min.nchar: 4  
+ Max.nchar:13   3rd Qu.: 72.00   Max.nchar:14   Max.nchar: 9   Max.nchar:14  
+                Max.   :896.00   NAs      : 4   NAs      : 4   NAs      :10  
+                NAs    :44                                                   
+      species      n_films     
+ Length   :87   Min.   :1.000  
+ N.unique :37   1st Qu.:1.000  
+ N.blank  : 0   Median :1.000  
+ Min.nchar: 3   Mean   :1.989  
+ Max.nchar:14   3rd Qu.:3.000  
+ NAs      : 4   Max.   :7.000  
+                               
+# A tibble: 6 × 12
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  <chr>      <dbl> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr> 
+1 Luke Sky…    172    77 blond      fair       blue            19   male  mascu…
+2 C-3PO        167    75 <NA>       gold       yellow         112   none  mascu…
+3 R2-D2         96    32 <NA>       white, bl… red             33   none  mascu…
+4 Darth Va…    202   136 none       white      yellow          41.9 male  mascu…
+5 Leia Org…    150    49 brown      light      brown           19   fema… femin…
+6 Owen Lars    178   120 brown, gr… light      blue            52   male  mascu…
+# ℹ 3 more variables: homeworld <chr>, species <chr>, n_films <dbl>
+      name     height       mass hair_color skin_color  eye_color birth_year 
+         0          6         28          5          0          0         44 
+       sex     gender  homeworld    species    n_films 
+         4          4         10          4          0 
+# A tibble: 12 × 3
+   column     n_missing pct_missing
+   <chr>          <int>       <dbl>
+ 1 birth_year        44        50.6
+ 2 mass              28        32.2
+ 3 homeworld         10        11.5
+ 4 height             6         6.9
+ 5 hair_color         5         5.7
+ 6 sex                4         4.6
+ 7 gender             4         4.6
+ 8 species            4         4.6
+ 9 name               0         0  
+10 skin_color         0         0  
+11 eye_color          0         0  
+12 n_films            0         0  
+
+================ PART C: WRANGLING ================
+# A tibble: 10 × 5
+   name                  species    height  mass   bmi
+   <chr>                 <chr>       <dbl> <dbl> <dbl>
+ 1 Jabba Desilijic Tiure Hutt          175  1358 443. 
+ 2 Owen Lars             Human         178   120  37.9
+ 3 IG-88                 Droid         200   140  35  
+ 4 Grievous              Kaleesh       216   159  34.1
+ 5 Jek Tono Porkins      <NA>          180   110  34  
+ 6 Darth Vader           Human         202   136  33.3
+ 7 Sebulba               Dug           112    40  31.9
+ 8 Bossk                 Trandoshan    190   113  31.3
+ 9 Beru Whitesun Lars    Human         165    75  27.5
+10 C-3PO                 Droid         167    75  26.9
+Rows before: 87 | after dropping NA height/mass: 59 
+Remaining NA in species: 0 
+# A tibble: 32 × 5
+   species      n mean_height mean_mass max_mass
+   <chr>    <int>       <dbl>     <dbl>    <dbl>
+ 1 Human       20        180.      81.3    136  
+ 2 Droid        4        140       69.8    140  
+ 3 Unknown      3        181       81      110  
+ 4 Gungan       2        210       74       82  
+ 5 Mirialan     2        168       53.1     56.2
+ 6 Wookiee      2        231      124      136  
+ 7 Aleena       1         79       15       15  
+ 8 Besalisk     1        198      102      102  
+ 9 Cerean       1        198       82       82  
+10 Clawdite     1        168       55       55  
+# ℹ 22 more rows
+# A tibble: 5 × 3
+  sex                n mean_height
+  <chr>          <int>       <dbl>
+1 female             9        172.
+2 hermaphroditic     1        175 
+3 male              42        178.
+4 none               4        140 
+5 unknown            3        181 
+# A tibble: 12 × 3
+   species  measure     value
+   <chr>    <chr>       <dbl>
+ 1 Human    mean_height 180. 
+ 2 Human    mean_mass    81.3
+ 3 Droid    mean_height 140  
+ 4 Droid    mean_mass    69.8
+ 5 Unknown  mean_height 181  
+ 6 Unknown  mean_mass    81  
+ 7 Gungan   mean_height 210  
+ 8 Gungan   mean_mass    74  
+ 9 Mirialan mean_height 168  
+10 Mirialan mean_mass    53.1
+11 Wookiee  mean_height 231  
+12 Wookiee  mean_mass   124  
+# A tibble: 6 × 3
+  species  mean_height mean_mass
+  <chr>          <dbl>     <dbl>
+1 Human           180.      81.3
+2 Droid           140       69.8
+3 Unknown         181       81  
+4 Gungan          210       74  
+5 Mirialan        168       53.1
+6 Wookiee         231      124  
+Round trip identical: TRUE 
+
+Saved output/species_summary.csv
+
+================ PART D: SESSION INFO ================
+Script completed successfully.
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 29680)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: Africa/Accra
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] readr_2.2.0 tidyr_1.3.2 dplyr_1.2.1
+
+loaded via a namespace (and not attached):
+ [1] utf8_1.2.6       R6_2.6.1         bit_4.6.0        tidyselect_1.2.1
+ [5] tzdb_0.5.0       magrittr_2.0.5   glue_1.8.1       tibble_3.3.1    
+ [9] parallel_4.6.1   pkgconfig_2.0.3  bit64_4.8.6      generics_0.1.4  
+[13] lifecycle_1.0.5  cli_3.6.6        vctrs_0.7.3      withr_3.0.3     
+[17] compiler_4.6.1   tools_4.6.1      purrr_1.2.2      hms_1.1.4       
+[21] pillar_1.11.1    crayon_1.5.3     rlang_1.3.0      vroom_1.7.1     
